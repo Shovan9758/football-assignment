@@ -115,6 +115,37 @@ margin-bottom: 70px;
     color: #6C6C6C;
     margin: 0;
 }
+/* ------Top moment section------- */
+.top-moments{
+    margin-bottom: 70px;
+}
+.moment-title{ 
+    text-align: center;
+    color:rgb(45,37,160);
+    font-size: 40px; }
+.flex-moments{
+    display: flex;
+    justify-content: center;
+}
+.moments{
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+
+}
+.goal{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0,0, .15);
+    
+}
 /* -------- Footer design------- */
 .footer-part{
     display: flex;
@@ -126,16 +157,29 @@ margin-bottom: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 63px;
 }
 .footer-image img{
     width: 484px;
     height: 110px;
 }
 .footer-icons{
+    margin: 20px;
     width: 170px;
     font-size: 32px;
     color: lightgray;
 }
 .footer-copyright{
     font-size: 18px;
+    margin: 0;
+}
+/* ---------Media query for moobile------- */
+@media only screen and  (max-width:688px) {
+    .top-section,.players-section,.flex-moments,.footer-part{ flex-direction: column;}
+    .top-title,.top-design{
+        width: 100%;
+    }
+    .players,.moments{
+        grid-template-columns:repeat(1,1fr);
+    }
 }
